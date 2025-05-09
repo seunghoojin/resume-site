@@ -7,13 +7,6 @@ body {
     line-height: 1.6;
   }
   
-  header {
-    background-color: #222;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-  }
-  
   header h1 {
     margin: 0;
     font-size: 2.5rem;
@@ -44,37 +37,41 @@ body {
     border-radius: 12px;
   }
 
-  /* Sticky Navbar */
+/* Sticky Navbar */
 .navbar {
   position: sticky;
   top: 0;
   background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 5px solid #000000;
   padding: 1rem 2rem;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.navbar ul {
-  list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Left: Icon */
+.navbar-left .nav-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Center: Name */
+.navbar-center {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar-title {
   margin: 0;
-  padding: 0;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
+  font-size: 1.5rem;
   font-weight: bold;
-  transition: color 0.3s ease;
+  color: #333;
 }
 
-.navbar a:hover {
-  color: #0070f3;
-}
-
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
