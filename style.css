@@ -531,12 +531,12 @@
 
   .examples-about .cards {
     flex-direction: column; /* Stack cards vertically */
-    gap: 24px; /* Reduce gap between cards */
+    gap: 24px; /* Add spacing between cards */
+    align-items: stretch; /* Ensure cards take full width */
   }
 
   .examples-about .card {
-    flex: 1 1 auto; /* Allow cards to resize */
-    min-width: 100%; /* Make cards full-width */
+    width: 100%; /* Make cards full-width */
   }
 
   .examples-about .footer {
