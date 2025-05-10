@@ -35,9 +35,12 @@
   flex: 0 0 auto;
 }
 
-.examples-about .figma {
+.examples-about .icon {
   position: relative;
-  width: 40px;
+  width: 40px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the icon is visible */
+  margin: 16px; /* Optional: Add spacing if needed */
 }
 
 .examples-about .navigation-pill-list {
@@ -215,6 +218,7 @@
   width: 100%;
   flex: 0 0 auto;
   background-color: #ffffff;
+  scroll-margin-top: 80px; /* Adjust scroll position by 80px */
 }
 
 .examples-about .text-content-heading {
@@ -260,6 +264,7 @@
   position: relative;
   align-self: stretch;
   width: 100%;
+  gap: 48px; /* Add gap between cards */
 }
 
 .examples-about .card {
@@ -326,7 +331,7 @@
 .examples-about .cards-2 {
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 48px; /* Add gap between cards */
   flex: 0 0 auto;
   display: flex;
   position: relative;
