@@ -530,6 +530,7 @@
   }
 
   .examples-about .cards {
+    display: flex;
     flex-direction: column; /* Stack cards vertically */
     gap: 24px; /* Add spacing between cards */
     align-items: stretch; /* Ensure cards take full width */
