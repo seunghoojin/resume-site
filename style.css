@@ -258,7 +258,6 @@
   position: relative;
   align-self: stretch;
   width: 100%;
-  gap: 48px; /* Add gap between cards */
 }
 
 .examples-about .card {
@@ -325,7 +324,6 @@
 .examples-about .cards-2 {
   flex-direction: column;
   align-items: flex-start;
-  gap: 48px; /* Add gap between cards */
   flex: 0 0 auto;
   display: flex;
   position: relative;
@@ -532,12 +530,20 @@
   .examples-about .cards {
     display: flex;
     flex-direction: column; /* Stack cards vertically */
-    gap: 24px; /* Add spacing between cards */
+    gap: 24px; /* Spacing between cards */
     align-items: stretch; /* Ensure cards take full width */
+    width: 100%; /* Ensure the container does not exceed screen width */
+    margin: 0 auto; /* Center the cards container */
   }
 
   .examples-about .card {
-    width: 100%; /* Make cards full-width */
+    width: 100%; /* Make each card full-width */
+    max-width: 100%; /* Prevent cards from exceeding screen width */
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   .examples-about .footer {
