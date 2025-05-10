@@ -59,10 +59,9 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px;
-  position: relative;
-  flex: 0 0 auto;
-  border-radius: 8px;
+  padding: 12px 16px; /* Increase padding for touch targets */
+  font-size: 1rem; /* Adjust font size */
+  border-radius: 12px; /* Add more rounded corners */
   background-color: transparent; /* Default background color */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
@@ -195,16 +194,11 @@
   opacity: 0.8;
 }
 
-.examples-about .image {
-  flex: 1;
-  align-self: stretch;
-  flex-grow: 1;
-  position: relative;
-  background: linear-gradient(
-    0deg,
-    rgba(227, 227, 227, 1) 0%,
-    rgba(227, 227, 227, 1) 100%
-  );
+.examples-about .image,
+.examples-about .image-2 {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 160px; /* Limit max width */
 }
 
 .examples-about .div-2 {
@@ -386,21 +380,11 @@
 }
 
 .examples-about .footer {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1200px;
-  align-items: flex-start;
-  gap: 16px 16px;
-  padding: 32px 32px 160px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-right-style: none;
-  border-bottom-style: none;
-  border-left-style: none;
-  border-color: #d9d9d9;
+  flex-direction: column; /* Stack footer sections */
+  align-items: center; /* Center-align content */
+  text-align: center; /* Center-align text */
+  gap: 16px; /* Adjust spacing */
+  padding: 16px; /* Reduce padding */
 }
 
 .examples-about .title-2 {
@@ -422,7 +406,8 @@
 .examples-about .button-list {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center; /* Center-align social icons */
+  gap: 12px; /* Adjust spacing */
   position: relative;
   flex: 0 0 auto;
 }
@@ -442,7 +427,8 @@
 .examples-about .text-link-list {
   display: flex;
   flex-direction: column;
-  width: 262px;
+  width: 100%; /* Make lists full-width */
+  text-align: center; /* Center-align text */
   align-items: flex-start;
   gap: 12px;
   position: relative;
@@ -502,4 +488,75 @@
   line-height: var(--body-base-line-height);
   white-space: nowrap;
   font-style: var(--body-base-font-style);
+}
+
+/* Base styles for mobile */
+.examples-about .header {
+  flex-wrap: wrap;
+  padding: 16px;
+  gap: 16px;
+}
+
+/* General mobile styles */
+@media (max-width: 768px) {
+  .examples-about .header {
+    flex-wrap: wrap;
+    padding: 16px; /* Reduce padding for smaller screens */
+    gap: 16px; /* Adjust spacing */
+  }
+
+  .examples-about .navigation-pill-list {
+    justify-content: center; /* Center navigation pills */
+    gap: 8px; /* Reduce gap between pills */
+  }
+
+  .examples-about .icon {
+    width: 32px; /* Reduce icon size */
+    margin: 8px; /* Adjust spacing */
+  }
+
+  .examples-about .hero-basic {
+    padding: 80px 16px; /* Reduce padding */
+    text-align: center; /* Center-align text */
+  }
+
+  .examples-about .title {
+    font-size: 48px; /* Scale down title size */
+    line-height: 1.2;
+  }
+
+  .examples-about .subtitle {
+    font-size: 20px; /* Scale down subtitle size */
+  }
+
+  .examples-about .cards {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 24px; /* Reduce gap between cards */
+  }
+
+  .examples-about .card {
+    flex: 1 1 auto; /* Allow cards to resize */
+    min-width: 100%; /* Make cards full-width */
+  }
+
+  .examples-about .footer {
+    flex-direction: column; /* Stack footer sections vertically */
+    align-items: center; /* Center-align footer content */
+    gap: 24px; /* Adjust spacing */
+    padding: 16px; /* Reduce padding */
+  }
+
+  .examples-about .text-link-list {
+    width: 100%; /* Make footer lists full-width */
+    text-align: center; /* Center-align text */
+  }
+}
+
+/* Enhancements for larger screens */
+@media (min-width: 768px) {
+  .examples-about .header {
+    flex-wrap: nowrap;
+    padding: 32px;
+    gap: 24px;
+  }
 }
