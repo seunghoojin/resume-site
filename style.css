@@ -6,25 +6,24 @@
   background-color: #ffffff;
 }
 
+/* Sticky header */
 .examples-about .header {
   flex-wrap: wrap;
-  gap: 0px 24px;
-  padding: 32px;
+  gap: 16px; /* Adjust spacing */
+  padding: 8px 16px; /* Use padding to control height */
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
   background-color: #ffffff;
-  border-top-style: none;
-  border-right-style: none;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-left-style: none;
   border-color: #d9d9d9;
   display: flex;
   align-items: center;
   position: sticky; /* Make the header sticky */
   top: 0; /* Stick to the top of the viewport */
   z-index: 1000; /* Ensure it stays above other elements */
+  min-height: 48px; /* Set a minimum height for smaller screens */
 }
 
 .examples-about .block {
@@ -35,12 +34,12 @@
   flex: 0 0 auto;
 }
 
+/* Icon inside the header */
 .examples-about .icon {
-  position: relative;
-  width: 40px; /* Set the desired width */
+  width: 24px; /* Reduce icon size */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Ensure the icon is visible */
-  margin: 16px; /* Optional: Add spacing if needed */
+  margin: 0; /* Remove extra spacing */
 }
 
 .examples-about .navigation-pill-list {
@@ -249,6 +248,7 @@
   font-style: var(--subheading-font-style);
 }
 
+/* Cards container */
 .examples-about .cards {
   display: flex;
   flex-wrap: wrap; /* Allow cards to wrap to the next row */
@@ -256,6 +256,7 @@
   justify-content: space-between; /* Distribute cards evenly */
 }
 
+/* Individual card */
 .examples-about .card {
   flex: 1 1 calc(33.333% - 24px); /* 3 cards per row with spacing */
   max-width: calc(33.333% - 24px); /* Prevent cards from exceeding 3 per row */
@@ -267,24 +268,27 @@
   padding: 16px; /* Add padding inside the card */
 }
 
+/* Image inside the card */
 .examples-about .image-2 {
-  width: 160px;
-  height: 160px;
-  position: relative;
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  padding: 24px; /* Add padding around the image */
   background: linear-gradient(
     0deg,
     rgba(227, 227, 227, 1) 0%,
     rgba(227, 227, 227, 1) 100%
   );
+  box-sizing: border-box; /* Include padding in width/height */
 }
 
+/* Body inside the card */
 .examples-about .body {
   display: flex;
   flex-direction: column;
-  min-width: 160px;
   align-items: flex-start;
   gap: 16px;
-  position: relative;
+  padding: 24px; /* Add padding around the body */
+  box-sizing: border-box; /* Include padding in width/height */
   flex: 1;
   flex-grow: 1;
 }
