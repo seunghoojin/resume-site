@@ -260,6 +260,11 @@
   flex: 1 1 calc(33.333% - 24px); /* 3 cards per row with spacing */
   max-width: calc(33.333% - 24px); /* Prevent cards from exceeding 3 per row */
   box-sizing: border-box; /* Include padding and border in width */
+  background-color: #ffffff; /* Ensure consistent background */
+  border-radius: 8px; /* Add rounded corners */
+  border: 1px solid; /* Add border */
+  border-color: #d9d9d9; /* Match the border color of Education cards */
+  padding: 16px; /* Add padding inside the card */
 }
 
 .examples-about .image-2 {
