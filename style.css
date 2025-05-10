@@ -525,7 +525,7 @@
   .examples-about .cards {
     display: flex;
     flex-direction: column; /* Stack cards vertically */
-    gap: 24px; /* Spacing between cards */
+    gap: 16px; /* Spacing between cards */
     align-items: stretch; /* Ensure cards take full width */
     width: 100%; /* Ensure the container does not exceed screen width */
     margin: 0 auto; /* Center the cards container */
@@ -534,7 +534,7 @@
   .examples-about .card {
     flex: 1 1 100%; /* 1 card per row */
     max-width: 100%;
-    box-sizing: border-box; /* Include padding and border in width */
+    box-sizing: content-box;
   }
 
   body {
