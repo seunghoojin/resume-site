@@ -261,47 +261,113 @@
   flex: 1 1 calc(33.333% - 24px); /* 3 cards per row with spacing */
   max-width: calc(33.333% - 24px); /* Prevent cards from exceeding 3 per row */
   box-sizing: border-box; /* Include padding and border in width */
-  background-color: #ffffff; /* Ensure consistent background */
+  background: #FFFFFF; /* Ensure consistent background */
+  border: 1px solid #D9D9D9; /* Match the border color of Education cards */
   border-radius: 8px; /* Add rounded corners */
-  border: 1px solid; /* Add border */
-  border-color: #d9d9d9; /* Match the border color of Education cards */
-  padding: 16px; /* Add padding inside the card */
+  padding: 24px; /* Add padding inside the card */
+  display: flex; /* Auto layout */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px;
+  width: 325.33px; /* Default width */
+  min-width: 240px;
+  height: auto; /* Allow height to adjust based on content */
 }
 
 /* Image inside the card */
 .examples-about .image-2 {
-  width: 100%; /* Make image responsive */
-  height: auto; /* Maintain aspect ratio */
-  padding: 24px; /* Add padding around the image */
-  background: linear-gradient(
-    0deg,
-    rgba(227, 227, 227, 1) 0%,
-    rgba(227, 227, 227, 1) 100%
-  );
+  width: 160px; /* Fixed width for image */
+  min-width: 160px;
+  height: 160px; /* Fixed height for image */
+  background: url(image.png), #E3E3E3; /* Placeholder background */
+  display: flex; /* Center image */
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
   box-sizing: border-box; /* Include padding in width/height */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 /* Body inside the card */
 .examples-about .body {
-  display: flex;
+  display: flex; /* Auto layout */
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  padding: 24px; /* Add padding around the body */
+  padding: 0px;
   box-sizing: border-box; /* Include padding in width/height */
-  flex: 1;
+  width: 277.33px; /* Default width */
+  min-width: 160px;
+  height: auto; /* Allow height to adjust based on content */
+  flex: none;
+  order: 1;
   flex-grow: 1;
 }
 
+/* Text inside the card */
 .examples-about .text {
+  display: flex; /* Auto layout */
   flex-direction: column;
-  gap: 8px;
-  display: flex;
   align-items: flex-start;
-  position: relative;
+  gap: 8px;
+  padding: 0px;
+  width: 277.33px; /* Default width */
+  height: auto; /* Allow height to adjust based on content */
+  flex: none;
+  order: 0;
   align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
+  flex-grow: 0;
+}
+
+/* Title inside the card */
+.examples-about .title {
+  width: 277.33px; /* Default width */
+  height: auto; /* Allow height to adjust based on content */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%; /* 29px */
+  letter-spacing: -0.02em;
+  color: #1E1E1E;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Body text inside the card */
+.examples-about .body-text {
+  width: 277.33px; /* Default width */
+  height: auto; /* Allow height to adjust based on content */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%; /* 22px */
+  color: #757575;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Button group inside the card */
+.examples-about .button-group {
+  display: none; /* Hide by default */
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 208px;
+  height: 40px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 .examples-about .p {
