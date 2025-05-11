@@ -223,19 +223,6 @@
   flex: 0 0 auto;
 }
 
-.examples-about .text-wrapper-2 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  font-family: var(--heading-font-family);
-  font-weight: var(--heading-font-weight);
-  color: #1e1e1e;
-  font-size: var(--heading-font-size);
-  letter-spacing: var(--heading-letter-spacing);
-  line-height: var(--heading-line-height);
-  font-style: var(--heading-font-style);
-}
-
 .examples-about .text-wrapper-3 {
   position: relative;
   align-self: stretch;
@@ -323,51 +310,17 @@
   flex-grow: 0;
 }
 
-/* Title inside the card */
-.examples-about .title {
-  width: 277.33px; /* Default width */
-  height: auto; /* Allow height to adjust based on content */
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 120%; /* 29px */
-  letter-spacing: -0.02em;
-  color: #1E1E1E;
-  flex: none;
-  order: 0;
+.examples-about .text-wrapper-2 {
+  position: relative;
   align-self: stretch;
-  flex-grow: 0;
-}
-
-/* Body text inside the card */
-.examples-about .body-text {
-  width: 277.33px; /* Default width */
-  height: auto; /* Allow height to adjust based on content */
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%; /* 22px */
-  color: #757575;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-/* Button group inside the card */
-.examples-about .button-group {
-  display: none; /* Hide by default */
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-  width: 208px;
-  height: 40px;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
+  margin-top: -1.00px;
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  color: #1e1e1e;
+  font-size: var(--heading-font-size);
+  letter-spacing: var(--heading-letter-spacing);
+  line-height: var(--heading-line-height);
+  font-style: var(--heading-font-style);
 }
 
 .examples-about .p {
@@ -390,6 +343,7 @@
   position: relative;
   align-self: stretch;
   width: 100%;
+  gap: 24px; /* Add spacing between cards */
 }
 
 .examples-about .card-2 {
@@ -462,27 +416,6 @@
   margin-left: -1.75px;
 }
 
-.examples-about .button-list {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center; /* Center-align social icons */
-  gap: 12px; /* Adjust spacing */
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.examples-about .x-logo {
-  position: relative;
-  width: 23.98px;
-  height: 24px;
-}
-
-.examples-about .img-2 {
-  position: relative;
-  width: 24px;
-  height: 24px;
-}
-
 .examples-about .text-link-list {
   display: flex;
   flex-direction: column;
@@ -548,6 +481,8 @@
   white-space: nowrap;
   font-style: var(--body-base-font-style);
 }
+
+/*----*/
 
 /* Base styles for mobile */
 .examples-about .header {
