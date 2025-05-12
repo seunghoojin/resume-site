@@ -6,114 +6,185 @@
   background-color: #ffffff;
 }
 
-/* Sticky header */
-.examples-about .header {
-  flex-wrap: wrap;
-  gap: 16px; /* Adjust spacing */
-  padding: 8px 16px; /* Use padding to control height */
+/* Header start*/
+  .examples-about .header {
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust spacing */
+    padding: 8px 16px; /* Use padding to control height */
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other elements */
+    min-height: 48px; /* Set a minimum height for smaller screens */
+  }
+
+  .examples-about .block {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .examples-about .icon {
+    width: 36px;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the icon is visible */
+    margin: 0; /* Remove extra spacing */
+  }
+
+  .examples-about .navigation-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 8px 8px;
+    position: relative;
+    flex: 1;
+    flex-grow: 1;
+  }
+
+  .examples-about .navigation-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px; /* Increase padding for touch targets */
+    font-size: 1rem; /* Adjust font size */
+    border-radius: 12px; /* Add more rounded corners */
+    background-color: transparent; /* Default background color */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .examples-about .navigation-pill:hover {
+    background-color: #F5F5F5; /* Change background color on hover */
+  }
+
+  .examples-about .navigation-pill:active {
+    background-color: #E0E0E0; /* Slightly darker color when clicked */
+  }
+
+  .examples-about .text-wrapper-pill {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: var(--single-line-body-base-font-family);
+    font-weight: var(--single-line-body-base-font-weight);
+    color: #1e1e1e;
+    font-size: var(--single-line-body-base-font-size);
+    letter-spacing: var(--single-line-body-base-letter-spacing);
+    line-height: var(--single-line-body-base-line-height);
+    white-space: nowrap;
+    font-style: var(--single-line-body-base-font-style);
+  }
+/* Header end*/
+
+/* Hero start*/
+  .examples-about .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 160px 64px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #f5f5f5;
+  }
+
+  .examples-about .text-content-title {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .examples-about .title {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1.00px;
+    font-family: var(--title-hero-font-family);
+    font-weight: var(--title-hero-font-weight);
+    color: #1e1e1e;
+    font-size: var(--title-hero-font-size);
+    text-align: center;
+    letter-spacing: var(--title-hero-letter-spacing);
+    line-height: var(--title-hero-line-height);
+    font-style: var(--title-hero-font-style);
+  }
+
+  .examples-about .subtitle {
+    position: relative;
+    align-self: stretch;
+    font-family: var(--subtitle-font-family);
+    font-weight: var(--subtitle-font-weight);
+    color: #757575;
+    font-size: var(--subtitle-font-size);
+    text-align: center;
+    letter-spacing: var(--subtitle-letter-spacing);
+    line-height: var(--subtitle-line-height);
+    font-style: var(--subtitle-font-style);
+  }
+/* Hero end*/
+
+/* Section */
+.examples-about .section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 64px;
+  position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
   background-color: #ffffff;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-color: #d9d9d9;
-  display: flex;
-  align-items: center;
-  position: sticky; /* Make the header sticky */
-  top: 0; /* Stick to the top of the viewport */
-  z-index: 1000; /* Ensure it stays above other elements */
-  min-height: 48px; /* Set a minimum height for smaller screens */
+  scroll-margin-top: 80px; /* Adjust scroll position by 80px */
 }
 
-.examples-about .block {
+/* Text */
+.examples-about .text-content-heading {
+  align-items: flex-start;
   display: inline-flex;
-  align-items: center;
-  gap: 24px;
+  flex-direction: column;
+  gap: 8px;
   position: relative;
   flex: 0 0 auto;
 }
 
-/* Icon inside the header */
-.examples-about .icon {
-  width: 24px; /* Reduce icon size */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure the icon is visible */
-  margin: 0; /* Remove extra spacing */
-}
-
-.examples-about .navigation-pill-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 8px 8px;
+.examples-about .text-wrapper-h1 {
   position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.examples-about .navigation-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 16px; /* Increase padding for touch targets */
-  font-size: 1rem; /* Adjust font size */
-  border-radius: 12px; /* Add more rounded corners */
-  background-color: transparent; /* Default background color */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.examples-about .navigation-pill:hover {
-  background-color: #F5F5F5; /* Change background color on hover */
-}
-
-.examples-about .navigation-pill:active {
-  background-color: #E0E0E0; /* Slightly darker color when clicked */
-}
-
-.examples-about .text-wrapper {
-  position: relative;
-  width: fit-content;
+  align-self: stretch;
   margin-top: -1.00px;
-  font-family: var(--single-line-body-base-font-family);
-  font-weight: var(--single-line-body-base-font-weight);
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
   color: #1e1e1e;
-  font-size: var(--single-line-body-base-font-size);
-  letter-spacing: var(--single-line-body-base-letter-spacing);
-  line-height: var(--single-line-body-base-line-height);
-  white-space: nowrap;
-  font-style: var(--single-line-body-base-font-style);
+  font-size: var(--heading-font-size);
+  letter-spacing: var(--heading-letter-spacing);
+  line-height: var(--heading-line-height);
+  font-style: var(--heading-font-style);
 }
 
-.examples-about .header-auth {
-  width: 178px;
-  gap: 12px;
-  display: flex;
-  align-items: center;
+.examples-about .text-wrapper-h2 {
   position: relative;
-}
-
-.examples-about .button {
-  all: unset;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-  background-color: #2c2c2c;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #2c2c2c;
-  color: #ffffff; /* Ensure text is visible */
-  font-family: var(--single-line-body-base-font-family);
-  font-size: var(--single-line-body-base-font-size);
+  align-self: stretch;
+  font-family: var(--subheading-font-family);
+  font-weight: var(--subheading-font-weight);
+  color: #757575;
+  font-size: var(--subheading-font-size);
+  letter-spacing: var(--subheading-letter-spacing);
+  line-height: var(--subheading-line-height);
+  font-style: var(--subheading-font-style);
 }
 
 .examples-about .div {
@@ -132,109 +203,6 @@
   font-style: var(--single-line-body-base-font-style);
 }
 
-.examples-about .hero-basic {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 160px 64px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #f5f5f5;
-}
-
-.examples-about .text-content-title {
-  align-items: center;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 8px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.examples-about .title {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  font-family: var(--title-hero-font-family);
-  font-weight: var(--title-hero-font-weight);
-  color: #1e1e1e;
-  font-size: var(--title-hero-font-size);
-  text-align: center;
-  letter-spacing: var(--title-hero-letter-spacing);
-  line-height: var(--title-hero-line-height);
-  font-style: var(--title-hero-font-style);
-}
-
-.examples-about .subtitle {
-  position: relative;
-  align-self: stretch;
-  font-family: var(--subtitle-font-family);
-  font-weight: var(--subtitle-font-weight);
-  color: #757575;
-  font-size: var(--subtitle-font-size);
-  text-align: center;
-  letter-spacing: var(--subtitle-letter-spacing);
-  line-height: var(--subtitle-line-height);
-  font-style: var(--subtitle-font-style);
-}
-
-.examples-about .panel-image-double {
-  display: flex;
-  height: 478px;
-  align-items: flex-start;
-  gap: 48px;
-  padding: 64px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #ffffff;
-  opacity: 0.8;
-}
-
-.examples-about .image,
-.examples-about .image-2 {
-  width: 100%; /* Make images responsive */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 160px; /* Limit max width */
-}
-
-.examples-about .div-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 48px;
-  padding: 64px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-  scroll-margin-top: 80px; /* Adjust scroll position by 80px */
-}
-
-.examples-about .text-content-heading {
-  align-items: flex-start;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 8px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.examples-about .text-wrapper-3 {
-  position: relative;
-  align-self: stretch;
-  font-family: var(--subheading-font-family);
-  font-weight: var(--subheading-font-weight);
-  color: #757575;
-  font-size: var(--subheading-font-size);
-  letter-spacing: var(--subheading-letter-spacing);
-  line-height: var(--subheading-line-height);
-  font-style: var(--subheading-font-style);
-}
-
 /* Cards container */
 .examples-about .cards {
   display: flex;
@@ -248,10 +216,7 @@
   flex: 1 1 calc(33.333% - 24px); /* 3 cards per row with spacing */
   max-width: calc(33.333% - 24px); /* Prevent cards from exceeding 3 per row */
   box-sizing: border-box; /* Include padding and border in width */
-  background: #FFFFFF; /* Ensure consistent background */
-  border: 1px solid #D9D9D9; /* Match the border color of Education cards */
-  border-radius: 8px; /* Add rounded corners */
-  padding: 24px; /* Add padding inside the card */
+  
   display: flex; /* Auto layout */
   flex-direction: column;
   flex-wrap: nowrap;
@@ -261,11 +226,17 @@
   width: 325.33px; /* Default width */
   min-width: 240px;
   height: auto; /* Allow height to adjust based on content */
+
+  background: #FFFFFF; /* Ensure consistent background */
+  border: 1px solid #D9D9D9; /* Match the border color of Education cards */
+  border-radius: 8px; /* Add rounded corners */
+  padding: 24px; /* Add padding inside the card */
+  
 }
 
 /* Image inside the card */
-.examples-about .image-2 {
-  width: 160px; /* Fixed width for image */
+.examples-about .image {
+  width: 100%; /* Fixed width for image */
   min-width: 160px;
   height: 160px; /* Fixed height for image */
   background: url(image.png), #E3E3E3; /* Placeholder background */
@@ -281,18 +252,21 @@
 
 /* Body inside the card */
 .examples-about .body {
+  flex: 1; /* Allow the body to take up remaining space */
   display: flex; /* Auto layout */
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 8px;
   padding: 0px;
   box-sizing: border-box; /* Include padding in width/height */
-  width: 277.33px; /* Default width */
+  width: fit-content; /* Default width */
   min-width: 160px;
   height: auto; /* Allow height to adjust based on content */
   flex: none;
   order: 1;
   flex-grow: 1;
+  overflow: hidden; /* Prevent content from overflowing */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
 }
 
 /* Text inside the card */
@@ -302,7 +276,7 @@
   align-items: flex-start;
   gap: 8px;
   padding: 0px;
-  width: 277.33px; /* Default width */
+  width: fit-content; /* Default width */
   height: auto; /* Allow height to adjust based on content */
   flex: none;
   order: 0;
@@ -310,22 +284,10 @@
   flex-grow: 0;
 }
 
-.examples-about .text-wrapper-2 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1.00px;
-  font-family: var(--heading-font-family);
-  font-weight: var(--heading-font-weight);
-  color: #1e1e1e;
-  font-size: var(--heading-font-size);
-  letter-spacing: var(--heading-letter-spacing);
-  line-height: var(--heading-line-height);
-  font-style: var(--heading-font-style);
-}
-
 .examples-about .p {
   position: relative;
   align-self: stretch;
+
   font-family: var(--body-base-font-family);
   font-weight: var(--body-base-font-weight);
   color: #757575;
@@ -347,142 +309,43 @@
 }
 
 .examples-about .card-2 {
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  min-width: 240px;
-  align-items: flex-start;
-  gap: 24px 24px;
+  flex-direction: row; /* Ensure image-2 and body are side by side */
+  flex-wrap: wrap; /* Allow content to wrap if needed */
+  align-items: center; /* Vertically align image-2 and body */
+  gap: 24px; /* Add spacing between image-2 and body */
   padding: 24px;
-  position: relative;
-  background-color: #ffffff;
+  width: 100%; /* Ensure card takes full width */
+  box-sizing: border-box; /* Include padding and border in width */
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
   border-radius: 8px;
-  border: 1px solid;
-  border-color: #d9d9d9;
 }
 
-.examples-about .button-group {
-  all: unset;
-  box-sizing: border-box;
+.examples-about .image-2 {
+  width: 60px; /* Set a fixed width for the image */
+  height: 60px; /* Set a fixed height for the image */
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  background: url(image.png), #E3E3E3; /* Placeholder background */
   display: flex;
-  align-items: center;
-  gap: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.examples-about .button-2 {
-  all: unset;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #e3e3e3;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #767676;
+  align-items: center;
 }
 
 .examples-about .footer {
-  flex-direction: column; /* Stack footer sections */
+  display: flex;
+  width: 100%;
+  flex-direction: column; /* Stack footer content vertically */
   align-items: center; /* Center-align content */
   text-align: center; /* Center-align text */
-  gap: 16px; /* Adjust spacing */
-  padding: 16px; /* Reduce padding */
+  gap: 8px; /* Add spacing between lines */
+  padding: 16px; /* Add padding around the footer */
+  background-color: #f5f5f5; /* Light gray background */
+  color: #757575; /* Neutral text color */
+  font-family: var(--single-line-body-base-font-family); /* Use base font */
+  font-size: 0.875rem; /* Slightly smaller font size */
+  line-height: 1.5; /* Improve readability */
 }
-
-.examples-about .title-2 {
-  display: flex;
-  flex-direction: column;
-  width: 262px;
-  align-items: flex-start;
-  gap: 24px;
-  position: relative;
-}
-
-.examples-about .img {
-  position: relative;
-  flex: 0 0 auto;
-  margin-top: -1.75px;
-  margin-left: -1.75px;
-}
-
-.examples-about .text-link-list {
-  display: flex;
-  flex-direction: column;
-  width: 100%; /* Make lists full-width */
-  text-align: center; /* Center-align text */
-  align-items: flex-start;
-  gap: 12px;
-  position: relative;
-}
-
-.examples-about .text-strong-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 0px 0px 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.examples-about .text-strong {
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.examples-about .text-strong-2 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: var(--body-strong-font-family);
-  font-weight: var(--body-strong-font-weight);
-  color: #1e1e1e;
-  font-size: var(--body-strong-font-size);
-  letter-spacing: var(--body-strong-letter-spacing);
-  line-height: var(--body-strong-line-height);
-  white-space: nowrap;
-  font-style: var(--body-strong-font-style);
-}
-
-.examples-about .text-link-list-item {
-  position: relative;
-  width: 89px;
-  height: 22px;
-}
-
-.examples-about .list-item {
-  position: absolute;
-  height: 22px;
-  top: -1px;
-  left: 0;
-  font-family: var(--body-base-font-family);
-  font-weight: var(--body-base-font-weight);
-  color: #1e1e1e;
-  font-size: var(--body-base-font-size);
-  letter-spacing: var(--body-base-letter-spacing);
-  line-height: var(--body-base-line-height);
-  white-space: nowrap;
-  font-style: var(--body-base-font-style);
-}
-
-/*----*/
 
 /* Base styles for mobile */
 .examples-about .header {
@@ -493,36 +356,6 @@
 
 /* General mobile styles */
 @media (max-width: 768px) {
-  .examples-about .header {
-    flex-wrap: wrap;
-    padding: 16px; /* Reduce padding for smaller screens */
-    gap: 16px; /* Adjust spacing */
-  }
-
-  .examples-about .navigation-pill-list {
-    justify-content: center; /* Center navigation pills */
-    gap: 8px; /* Reduce gap between pills */
-  }
-
-  .examples-about .icon {
-    width: 32px; /* Reduce icon size */
-    margin: 8px; /* Adjust spacing */
-  }
-
-  .examples-about .hero-basic {
-    padding: 80px 16px; /* Reduce padding */
-    text-align: center; /* Center-align text */
-  }
-
-  .examples-about .title {
-    font-size: 48px; /* Scale down title size */
-    line-height: 1.2;
-  }
-
-  .examples-about .subtitle {
-    font-size: 20px; /* Scale down subtitle size */
-  }
-
   .examples-about .cards {
     display: flex;
     flex-direction: column; /* Stack cards vertically */
@@ -547,20 +380,6 @@
     align-items: center; /* Center-align footer content */
     gap: 24px; /* Adjust spacing */
     padding: 16px; /* Reduce padding */
-  }
-
-  .examples-about .text-link-list {
-    width: 100%; /* Make footer lists full-width */
-    text-align: center; /* Center-align text */
-  }
-}
-
-/* Enhancements for larger screens */
-@media (min-width: 768px) {
-  .examples-about .header {
-    flex-wrap: nowrap;
-    padding: 32px;
-    gap: 24px;
   }
 }
 
