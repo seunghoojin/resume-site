@@ -85,6 +85,41 @@
     white-space: nowrap;
     font-style: var(--single-line-body-base-font-style);
   }
+
+  .examples-about .cta-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px; /* Increase padding for touch targets */
+    font-size: 1rem; /* Adjust font size */
+    border-radius: 12px; /* Add more rounded corners */
+    background-color: #2c2c2c; /* Default background color */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .examples-about .cta-wrapper-pill {
+    display: inline-flex;           /* Enable flex layout for icon + text */
+    align-items: center;            /* Vertically center icon and text */
+    gap: 8px;                       /* Space between icon and text */
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: var(--single-line-body-base-font-family);
+    font-weight: var(--single-line-body-base-font-weight);
+    color: #f5f5f5;
+    font-size: var(--single-line-body-base-font-size);
+    letter-spacing: var(--single-line-body-base-letter-spacing);
+    line-height: var(--single-line-body-base-line-height);
+    white-space: nowrap;
+    font-style: var(--single-line-body-base-font-style);
+  }
+
+  .cta-icon {
+    width: 16px;    /* Adjust size as needed */
+    height: 16px;
+    display: inline-block;
+  }
 /* Header end*/
 
 /* Hero start*/
