@@ -1,43 +1,97 @@
 :root {
+  /* ============================================
+     COLOR PALETTE
+     ============================================ */
+  --color-text-primary: #1e1e1e;
+  --color-text-secondary: #757575;
+  --color-border: #d9d9d9;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f5f5f5;
+  --color-bg-hover: #f5f5f5;
+  --color-bg-active: #e0e0e0;
+  --color-bg-dark: #2c2c2c;
+  --color-bg-placeholder: #e3e3e3;
+  --color-link-red: #fe0000;
+  --color-visited-link-red: #a00101;
+  
+  /* ============================================
+     SPACING SCALE
+     ============================================ */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  
+  /* ============================================
+     Z-INDEX LAYERS
+     ============================================ */
+  --z-header: 1000;
+  --z-arrows: 10;
+  
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-full: 50%;
+  
+  /* ============================================
+     SIZING
+     ============================================ */
+  --card-width: 325px;
+  --card-width-mobile: 280px;
+  --card-height-scrollable: 357px;
+  --header-min-height: 48px;
+  --header-scroll-offset: 80px;
+  
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
   --single-line-body-base-font-family: "Inter", Helvetica;
   --single-line-body-base-font-weight: 400;
-  --single-line-body-base-font-size: 1rem; /* Base font size */
+  --single-line-body-base-font-size: 1rem;
   --single-line-body-base-letter-spacing: 0px;
   --single-line-body-base-line-height: 100%;
   --single-line-body-base-font-style: normal;
 
   --title-hero-font-family: "Inter", Helvetica;
   --title-hero-font-weight: 700;
-  --title-hero-font-size: 4.5rem; /* Scalable title size */
+  --title-hero-font-size: 4.5rem;
   --title-hero-letter-spacing: -2.16px;
   --title-hero-line-height: 120%;
   --title-hero-font-style: normal;
+  
   --subtitle-font-family: "Inter", Helvetica;
   --subtitle-font-weight: 400;
-  --subtitle-font-size: 2rem; /* Scalable subtitle size */
+  --subtitle-font-size: 2rem;
   --subtitle-letter-spacing: 0px;
   --subtitle-line-height: 120%;
   --subtitle-font-style: normal;
 
   --heading-font-family: "Inter", Helvetica;
   --heading-font-weight: 600;
-  --heading-font-size: 1.5rem; /* Scalable heading size */
+  --heading-font-size: 1.5rem;
   --heading-letter-spacing: -0.48px;
   --heading-line-height: 120%;
   --heading-font-style: normal;
+  
   --subheading-font-family: "Inter", Helvetica;
   --subheading-font-weight: 400;
-  --subheading-font-size: 1.1rem; /* Scalable subheading size */
+  --subheading-font-size: 1.1rem;
   --subheading-letter-spacing: 0px;
   --subheading-line-height: 120%;
   --subheading-font-style: normal;
 
   --body-base-font-family: "Inter", Helvetica;
   --body-base-font-weight: 400;
-  --body-base-font-size: 1rem; /* Scalable body text */
+  --body-base-font-size: 1rem;
   --body-base-letter-spacing: 0px;
   --body-base-line-height: 140%;
   --body-base-font-style: normal;
+  
   --body-strong-font-family: "Inter", Helvetica;
   --body-strong-font-weight: 600;
   --body-strong-font-size: 16px;

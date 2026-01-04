@@ -26,7 +26,24 @@
               <img src="assets/arrow.svg" alt="" class="cta-icon" />
             </div></a>
         </div>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
       </header>
+      <nav class="mobile-overlay">
+        <div class="mobile-menu-content">
+          <a href="#about" class="mobile-menu-link">About</a>
+          <a href="#projects" class="mobile-menu-link">Projects</a>
+          <a href="#education" class="mobile-menu-link">Education</a>
+          <a href="#experience" class="mobile-menu-link">Experience</a>
+          <a href="https://blog.andj.studio" class="mobile-menu-link mobile-menu-cta" target="_blank" rel="noopener">Blog</a>
+        </div>
+      </nav>
       <div class="hero">
         <div class="text-content-title">
           <div class="title">AndJ</div>
@@ -38,7 +55,13 @@
           <div class="text-wrapper-h1">About</div>
           <div class="text-wrapper-h2">Hi. My name is Andrew Jin. Call me AndJ for short.</div>
         </div>
-        <div class="cards">
+        <div class="cards-scroll-container">
+          <button class="scroll-arrow scroll-arrow-left" data-target="about-cards" aria-label="Scroll left">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="cards" id="about-cards">
           <div class="card">
             <div class="body">
               <div class="text">
@@ -94,6 +117,12 @@
               </div>
             </div>
           </div>
+          <button class="scroll-arrow scroll-arrow-right" data-target="about-cards" aria-label="Scroll right">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
         </div>
       </div>
       <div id="projects" class="section">
@@ -101,9 +130,14 @@
           <div class="text-wrapper-h1">Projects</div>
           <div class="text-wrapper-h2">Subheading</div>
         </div>
-        <div class="cards">
+        <div class="cards-scroll-container">
+          <button class="scroll-arrow scroll-arrow-left" data-target="projects-cards" aria-label="Scroll left">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="cards" id="projects-cards">
           <div class="card">
-            <div class="image"></div>
             <div class="body">
               <div class="text">
                 <div class="text-wrapper-h1">Food Innovation Hub</div>
@@ -114,32 +148,20 @@
             </div>
           </div>
           <div class="card">
-            <div class="image"></div>
             <div class="body">
               <div class="text">
-                <div class="text-wrapper-h1">Title 4</div>
-                <p class="p">Body text for card 4.</p>
+                <div class="text-wrapper-h1">Title</div>
+                <p class="p">Body text for card.</p>
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="image"></div>
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Title 4</div>
-                <p class="p">Body text for card 4.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image"></div>
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Title 4</div>
-                <p class="p">Body text for card 4.</p>
-              </div>
-            </div>
-          </div>
+          
+          <button class="scroll-arrow scroll-arrow-right" data-target="projects-cards" aria-label="Scroll right">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
         </div>
       </div>
       <div id="education" class="section">
@@ -197,5 +219,6 @@
           <p class="footer-text">Address : 1, Gwanak-ro, Gwanak-gu, Seoul, Republic of Korea</p>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
