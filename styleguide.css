@@ -1,104 +1,69 @@
+/* ============================================
+   DESIGN TOKENS — AndJ 2026 redesign
+   Light theme is the base; [data-theme="dark"]
+   overrides. A head script sets data-theme from
+   localStorage or prefers-color-scheme.
+   ============================================ */
 :root {
-  /* ============================================
-     COLOR PALETTE
-     ============================================ */
-  --color-text-primary: #1e1e1e;
-  --color-text-secondary: #757575;
-  --color-text-inverse: #f5f5f5;
-  --color-border: #d9d9d9;
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f5f5f5;
-  --color-bg-hover: #f5f5f5;
-  --color-bg-active: #e0e0e0;
-  --color-bg-dark: #2c2c2c;
-  --color-bg-dark-hover: #1a1a1a;
-  --color-bg-placeholder: #e3e3e3;
-  --color-bg-translucent: rgba(255, 255, 255, 0.95);
-  --color-bg-overlay: rgba(255, 255, 255, 0.98);
-  /* #d40000 keeps the brand red above the 4.5:1 WCAG AA contrast ratio on white */
-  --color-link-red: #d40000;
-  --color-visited-link-red: #a00101;
+  /* ----- COLOR (light) ----- */
+  --color-bg: #f4f4f2;
+  --color-bg-raised: #ececea;
+  --color-text: #141414;
+  --color-text-secondary: rgba(20, 20, 20, 0.58);
+  --color-hairline: rgba(20, 20, 20, 0.18);
+  --color-hairline-strong: rgba(20, 20, 20, 0.4);
+  --color-accent: #d40000;
+  --color-inverse: #f4f4f2;
 
-  /* ============================================
-     SPACING SCALE
-     ============================================ */
+  /* ----- SPACING ----- */
   --space-xs: 8px;
   --space-sm: 12px;
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 48px;
-  --space-2xl: 64px;
-  --space-3xl: 96px;
+  --space-2xl: 80px;
+  --space-3xl: 128px;
+  --page-margin: clamp(16px, 4vw, 64px);
 
-  /* ============================================
-     Z-INDEX LAYERS
-     ============================================ */
+  /* ----- TYPE ----- */
+  --font-sans: "Inter", Helvetica, Arial, sans-serif;
+
+  /* Hero wordmark: big but bounded (no 388px monsters) */
+  --type-display: clamp(4.5rem, 15vw, 11rem);
+  --type-title: clamp(2rem, 4.5vw, 3.25rem);      /* section statements / project titles */
+  --type-heading: clamp(1.5rem, 2.6vw, 2rem);     /* sub-statements */
+  --type-statement: 1.375rem;                     /* about card titles */
+  --type-body: 1rem;
+  --type-small: 0.875rem;
+  --type-label: 0.75rem;                          /* uppercase labels */
+
+  --tracking-display: -0.045em;
+  --tracking-title: -0.02em;
+  --tracking-label: 0.08em;
+
+  --leading-display: 0.95;
+  --leading-title: 1.1;
+  --leading-body: 1.6;
+
+  /* ----- STRUCTURE ----- */
+  --header-height: 56px;
+  --header-scroll-offset: 88px;
   --z-header: 1000;
-  --z-arrows: 10;
+  --radius-pill: 999px;
 
-  /* ============================================
-     BORDER RADIUS
-     ============================================ */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-full: 50%;
+  /* ----- MOTION ----- */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --duration-fast: 0.25s;
+  --duration-slow: 0.7s;
+}
 
-  /* ============================================
-     SIZING
-     ============================================ */
-  --card-width: 325px;
-  --card-width-mobile: 280px;
-  --card-min-height: 220px;
-  --card-logo-size: 56px;
-  --header-min-height: 48px;
-  --header-scroll-offset: 80px;
-
-  /* ============================================
-     TYPOGRAPHY
-     ============================================ */
-  --font-family-base: "Inter", Helvetica, Arial, sans-serif;
-
-  --single-line-body-base-font-family: var(--font-family-base);
-  --single-line-body-base-font-weight: 400;
-  --single-line-body-base-font-size: 1rem;
-  --single-line-body-base-letter-spacing: 0px;
-  --single-line-body-base-line-height: 120%;
-  --single-line-body-base-font-style: normal;
-
-  --title-hero-font-family: var(--font-family-base);
-  --title-hero-font-weight: 700;
-  --title-hero-font-size: clamp(3rem, 10vw, 4.5rem);
-  --title-hero-letter-spacing: -0.03em;
-  --title-hero-line-height: 120%;
-  --title-hero-font-style: normal;
-
-  --subtitle-font-family: var(--font-family-base);
-  --subtitle-font-weight: 400;
-  --subtitle-font-size: clamp(1.375rem, 5.5vw, 2rem);
-  --subtitle-letter-spacing: 0px;
-  --subtitle-line-height: 120%;
-  --subtitle-font-style: normal;
-
-  --heading-font-family: var(--font-family-base);
-  --heading-font-weight: 600;
-  --heading-font-size: 1.5rem;
-  --heading-letter-spacing: -0.48px;
-  --heading-line-height: 120%;
-  --heading-font-style: normal;
-
-  --heading-sm-font-size: 1.25rem;
-
-  --subheading-font-family: var(--font-family-base);
-  --subheading-font-weight: 400;
-  --subheading-font-size: 1.1rem;
-  --subheading-letter-spacing: 0px;
-  --subheading-line-height: 120%;
-  --subheading-font-style: normal;
-
-  --body-base-font-family: var(--font-family-base);
-  --body-base-font-weight: 400;
-  --body-base-font-size: 1rem;
-  --body-base-letter-spacing: 0px;
-  --body-base-line-height: 140%;
-  --body-base-font-style: normal;
+:root[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-bg-raised: #161616;
+  --color-text: #f2f2f0;
+  --color-text-secondary: rgba(242, 242, 240, 0.56);
+  --color-hairline: rgba(242, 242, 240, 0.2);
+  --color-hairline-strong: rgba(242, 242, 240, 0.45);
+  --color-accent: #ff4b3e;
+  --color-inverse: #0a0a0a;
 }

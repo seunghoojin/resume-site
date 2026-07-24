@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#e6e8e3"/>
+  <g fill="#f7f7f5" stroke="#141414" stroke-width="4">
+    <rect x="140" y="260" width="120" height="120"/>
+    <rect x="300" y="260" width="120" height="120"/>
+    <rect x="460" y="260" width="120" height="120"/>
+    <rect x="140" y="420" width="120" height="120"/>
+    <rect x="460" y="420" width="120" height="120"/>
+    <rect x="140" y="580" width="120" height="120"/>
+    <rect x="300" y="580" width="120" height="120"/>
+    <rect x="460" y="580" width="120" height="120"/>
+  </g>
+  <rect x="300" y="420" width="120" height="120" fill="#d40000"/>
+  <path d="M 120 760 L 660 760" stroke="#141414" stroke-width="5" stroke-dasharray="2 14" stroke-linecap="round"/>
+  <text x="120" y="96" font-family="Inter, Helvetica, sans-serif" font-size="26" letter-spacing="6" fill="#141414">FOOD INNOVATION HUB</text>
+</svg>
