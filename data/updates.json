@@ -1,0 +1,38 @@
+[
+  {
+    "start": "2026.07",
+    "end": null,
+    "org": "YEHS",
+    "org_url": "https://www.naekyehs.org/intro",
+    "role": "286th Member",
+    "type": "membership",
+    "summary": "A prominent South Korean network for elite engineering students under the [National Academy of Engineering of Korea (NAEK)](https://www.naek.or.kr/en)."
+  },
+  {
+    "start": "2026.02",
+    "end": null,
+    "org": "Injaerim (인재림)",
+    "org_url": "https://cvt.kfas.or.kr/intro/type2.php",
+    "role": "5th Scholar",
+    "type": "scholarship",
+    "summary": "A prestigious one-year undergraduate leadership and scholarship program run by the [Korea Foundation for Advanced Studies (KFAS)](https://www.kfas.or.kr/) to cultivate practical problem-solvers who create social value."
+  },
+  {
+    "start": "2025.07",
+    "end": null,
+    "org": "Shinsegae Jisik Hyangyeon (신세계 지식향연)",
+    "org_url": "https://www.ssghero.com/",
+    "role": "12th President",
+    "type": "leadership",
+    "summary": "Elected as the 12th president of a humanities talent-nurturing scholarship program hosted by the [Shinsegae Group](https://www.sikorea.co.kr/company/group)."
+  },
+  {
+    "start": "2025.07",
+    "end": "2025.08",
+    "org": "HAFS Camp",
+    "org_url": "https://www.hafscamp.com/",
+    "role": "29th Mentor",
+    "type": "activity",
+    "summary": "Full-time mentor at HAFS Camp, a premier English and leadership camp held at the [Yongin Hankuk Academy of Foreign Studies](https://hafs.hs.kr/)."
+  }
+]
