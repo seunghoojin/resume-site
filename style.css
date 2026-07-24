@@ -1,12 +1,16 @@
 /* ============================================
    BASE LAYOUT
    ============================================ */
-.examples-about {
+.page {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
   background-color: var(--color-bg-primary);
+}
+
+main {
+  width: 100%;
 }
 
 /* ============================================
@@ -27,16 +31,14 @@
   z-index: var(--z-header);
 }
 
-.block {
+.brand {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-lg);
 }
 
-.icon {
+.brand-logo {
   width: 36px;
   height: auto;
-  display: block;
 }
 
 .navigation-pill-list {
@@ -60,10 +62,6 @@
   transition: background-color 0.3s ease;
 }
 
-.navigation-pill:hover {
-  background-color: var(--color-bg-hover);
-}
-
 .navigation-pill:active {
   background-color: var(--color-bg-active);
 }
@@ -73,10 +71,9 @@
   font-weight: 600;
 }
 
-.text-wrapper-pill {
+.pill-label {
   position: relative;
   width: fit-content;
-  margin-top: -1px;
   font-family: var(--single-line-body-base-font-family);
   font-weight: var(--single-line-body-base-font-weight);
   color: var(--color-text-primary);
@@ -99,16 +96,15 @@
   transition: background-color 0.3s ease;
 }
 
-.cta-wrapper-pill {
+.cta-label {
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
   position: relative;
   width: fit-content;
-  margin-top: -1px;
   font-family: var(--single-line-body-base-font-family);
   font-weight: var(--single-line-body-base-font-weight);
-  color: var(--color-bg-hover);
+  color: var(--color-text-inverse);
   font-size: var(--single-line-body-base-font-size);
   letter-spacing: var(--single-line-body-base-letter-spacing);
   line-height: var(--single-line-body-base-line-height);
@@ -134,14 +130,9 @@
   height: 44px;
   border: none;
   background-color: transparent;
-  cursor: pointer;
   padding: 0;
   color: var(--color-text-primary);
   transition: transform 0.3s ease;
-}
-
-.menu-toggle:hover {
-  transform: scale(1.1);
 }
 
 .menu-icon,
@@ -175,7 +166,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: var(--color-bg-overlay);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   opacity: 0;
@@ -185,6 +176,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  overscroll-behavior: contain;
 }
 
 .mobile-overlay.is-active {
@@ -209,12 +201,10 @@
   font-size: 1.125rem;
   font-weight: 500;
   color: var(--color-text-primary);
-  text-decoration: none;
   transition: color 0.3s ease;
   width: 100%;
 }
 
-.mobile-menu-link:hover,
 .mobile-menu-link.active {
   color: var(--color-text-secondary);
   background-color: var(--color-bg-hover);
@@ -225,11 +215,6 @@
   background-color: var(--color-bg-dark);
   color: var(--color-bg-primary);
   font-weight: 600;
-}
-
-.mobile-menu-cta:hover {
-  color: var(--color-bg-primary);
-  background-color: #1a1a1a;
 }
 
 /* ============================================
@@ -244,17 +229,14 @@
   background-color: var(--color-bg-secondary);
 }
 
-.text-content-title {
+.hero-text {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-xs);
 }
 
-.title {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1px;
+.hero-title {
   font-family: var(--title-hero-font-family);
   font-weight: var(--title-hero-font-weight);
   color: var(--color-text-primary);
@@ -265,9 +247,7 @@
   font-style: var(--title-hero-font-style);
 }
 
-.subtitle {
-  position: relative;
-  align-self: stretch;
+.hero-subtitle {
   font-family: var(--subtitle-font-family);
   font-weight: var(--subtitle-font-weight);
   color: var(--color-text-secondary);
@@ -292,17 +272,14 @@
   scroll-margin-top: var(--header-scroll-offset);
 }
 
-.text-content-heading {
+.section-heading {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-xs);
 }
 
-.text-wrapper-h1 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1px;
+.section-title {
   font-family: var(--heading-font-family);
   font-weight: var(--heading-font-weight);
   color: var(--color-text-primary);
@@ -312,9 +289,7 @@
   font-style: var(--heading-font-style);
 }
 
-.text-wrapper-h2 {
-  position: relative;
-  align-self: stretch;
+.section-subtitle {
   font-family: var(--subheading-font-family);
   font-weight: var(--subheading-font-weight);
   color: var(--color-text-secondary);
@@ -325,80 +300,63 @@
 }
 
 /* ============================================
-   CARD COMPONENTS (DRY)
+   CARDS
    ============================================ */
-
-/* Base card styles */
-.card,
-.card-2 {
+.card {
   display: flex;
-  gap: var(--space-lg);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
   padding: var(--space-lg);
   background: var(--color-bg-primary);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  box-sizing: border-box;
 }
 
-/* Scrollable card (vertical layout) */
-.card {
-  flex-direction: column;
+/* Scrollable rail card */
+.card-rail .card {
   flex: 0 0 var(--card-width);
   min-width: var(--card-width);
   max-width: var(--card-width);
-  height: 100%;
-  align-items: flex-start;
+  min-height: var(--card-min-height);
 }
 
-/* Horizontal card layout */
-.card-2 {
+/* Row card (logo + text) */
+.card--row {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  gap: var(--space-lg);
   width: 100%;
 }
 
-/* Card images */
-.image,
-.image-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-bg-placeholder);
+.card-logo {
+  width: var(--card-logo-size);
+  height: var(--card-logo-size);
+  object-fit: contain;
   flex-shrink: 0;
 }
 
-.image {
-  width: 100%;
-  min-width: 160px;
-  height: 160px;
-}
-
-.image-2 {
-  width: 60px;
-  height: 60px;
-}
-
-/* Card content */
-.body {
+.card-body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-xs);
-  flex-grow: 1;
-  overflow: hidden;
+  flex: 1;
+  min-width: 200px;
 }
 
-.text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-xs);
-  align-self: stretch;
+.card-title {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  color: var(--color-text-primary);
+  font-size: var(--heading-sm-font-size);
+  letter-spacing: var(--heading-letter-spacing);
+  line-height: var(--heading-line-height);
+  font-style: var(--heading-font-style);
 }
 
-.p {
-  position: relative;
+.card-text {
   align-self: stretch;
   font-family: var(--body-base-font-family);
   font-weight: var(--body-base-font-weight);
@@ -413,33 +371,31 @@
    CARD CONTAINERS
    ============================================ */
 
-/* Horizontal scrollable cards */
+/* Horizontal scrollable rail */
 .cards-scroll-container {
   position: relative;
   width: 100%;
-  height: var(--card-height-scrollable);
 }
 
-.cards {
+.card-rail {
   display: flex;
   flex-wrap: nowrap;
   gap: var(--space-lg);
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  height: 100%;
   padding-bottom: var(--space-xs);
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-.cards::-webkit-scrollbar {
+.card-rail::-webkit-scrollbar {
   display: none;
 }
 
 /* Vertical stacked cards */
-.cards-2 {
+.card-stack {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -457,21 +413,14 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-full);
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--color-bg-translucent);
   border: 1px solid var(--color-border);
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: var(--z-arrows);
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.scroll-arrow:hover {
-  background-color: var(--color-bg-primary);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-50%) scale(1.05);
 }
 
 .scroll-arrow:active {
@@ -514,7 +463,6 @@
 }
 
 .footer-text {
-  margin: 0;
   color: var(--color-text-secondary);
   font-family: var(--body-base-font-family);
   font-size: var(--body-base-font-size);
@@ -522,7 +470,56 @@
 }
 
 /* ============================================
-   RESPONSIVE DESIGN (Mobile First)
+   LINKS
+   ============================================ */
+.card-text a,
+.footer-text a {
+  color: var(--color-link-red);
+  transition: opacity 0.2s ease;
+}
+
+.card-text a:visited,
+.footer-text a:visited {
+  color: var(--color-visited-link-red);
+}
+
+/* ============================================
+   HOVER STATES (pointer devices only)
+   ============================================ */
+@media (hover: hover) {
+  .navigation-pill:hover {
+    background-color: var(--color-bg-hover);
+  }
+
+  .menu-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  .mobile-menu-link:hover {
+    color: var(--color-text-secondary);
+    background-color: var(--color-bg-hover);
+  }
+
+  .mobile-menu-cta:hover {
+    color: var(--color-bg-primary);
+    background-color: var(--color-bg-dark-hover);
+  }
+
+  .scroll-arrow:hover {
+    background-color: var(--color-bg-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .card-text a:hover,
+  .footer-text a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
    ============================================ */
 
 /* Mobile devices */
@@ -531,30 +528,29 @@
     display: none;
   }
 
-  .cta-pill {
-    display: none;
-  }
-
   .menu-toggle {
     display: flex;
     margin-left: auto;
   }
+
   .hero {
     padding: var(--space-2xl) var(--space-md);
   }
+
   .section {
     padding: var(--space-xl) var(--space-md);
   }
+
   .header {
     padding: var(--space-xs);
   }
 
-  .cards {
+  .card-rail {
     gap: var(--space-md);
     padding-bottom: 0;
   }
 
-  .card {
+  .card-rail .card {
     flex: 0 0 var(--card-width-mobile);
     min-width: var(--card-width-mobile);
     max-width: var(--card-width-mobile);
@@ -574,23 +570,4 @@
   .section {
     padding: var(--space-2xl) var(--space-xl);
   }
-}
-
-/* Links */
-
-.p a, 
-.footer-text a {
-  color: var(--color-link-red);
-  transition: opacity 0.2s ease;
-}
-
-.p a:visited, 
-.footer-text a:visited {
-  color: var(--color-visited-link-red);
-}
-
-.p a:hover, 
-.footer-text a:hover {
-  text-decoration: underline;
-  opacity: 0.8;
 }

@@ -1,41 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AndJ — Andrew Jin</title>
+    <meta name="description" content="Portfolio of Andrew Jin (AndJ) — architecture and artificial intelligence at Seoul National University. We build great stories through design, computation, and product." />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://andj.studio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://andj.studio/" />
+    <meta property="og:title" content="AndJ — We Build Great Stories" />
+    <meta property="og:description" content="Portfolio of Andrew Jin (AndJ) — architecture, artificial intelligence, and product." />
+    <meta property="og:image" content="https://andj.studio/assets/favicon-448x448.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/favicon.ico" sizes="16x16" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
     <link rel="icon" href="assets/favicon-16x16.png" sizes="16x16" type="image/png" />
     <link rel="icon" href="assets/favicon-32x32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="assets/favicon-448x448.png" sizes="448x448" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   </head>
   <body>
-    <div class="examples-about">
+    <div class="page">
       <header class="header">
-        <div class="block"><a href="https://andj.studio"><img class="icon" src="assets/icon.svg" /></div></a>
-        <div class="navigation-pill-list">
-          <a href="#about" class="navigation-pill"><div class="text-wrapper-pill">About</div></a>
-          <a href="#projects" class="navigation-pill"><div class="text-wrapper-pill">Projects</div></a>
-          <a href="#education" class="navigation-pill"><div class="text-wrapper-pill">Education</div></a>
-          <a href="#experience" class="navigation-pill"><div class="text-wrapper-pill">Experience</div></a>
+        <a class="brand" href="https://andj.studio"><img class="brand-logo" src="assets/icon.svg" alt="AndJ logo" width="36" height="36" /></a>
+        <nav class="navigation-pill-list" aria-label="Primary">
+          <a href="#about" class="navigation-pill"><span class="pill-label">About</span></a>
+          <a href="#projects" class="navigation-pill"><span class="pill-label">Projects</span></a>
+          <a href="#education" class="navigation-pill"><span class="pill-label">Education</span></a>
+          <a href="#experience" class="navigation-pill"><span class="pill-label">Experience</span></a>
           <a href="https://blog.andj.studio" class="cta-pill" target="_blank" rel="noopener">
-            <div class="cta-wrapper-pill">
+            <span class="cta-label">
               Blog
-              <img src="assets/arrow.svg" alt="" class="cta-icon" />
-            </div></a>
-        </div>
+              <img src="assets/arrow.svg" alt="" class="cta-icon" width="16" height="16" />
+            </span></a>
+        </nav>
         <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
       </header>
-      <nav class="mobile-overlay">
+      <nav class="mobile-overlay" aria-label="Mobile navigation">
         <div class="mobile-menu-content">
           <a href="#about" class="mobile-menu-link">About</a>
           <a href="#projects" class="mobile-menu-link">Projects</a>
@@ -44,198 +58,151 @@
           <a href="https://blog.andj.studio" class="mobile-menu-link mobile-menu-cta" target="_blank" rel="noopener">Blog</a>
         </div>
       </nav>
-      <div class="hero">
-        <div class="text-content-title">
-          <div class="title">AndJ</div>
-          <div class="subtitle">We Build Great Stories</div>
-        </div>
-      </div>
-      <div id="about" class="section">
-        <div class="text-content-heading">
-          <div class="text-wrapper-h1">About</div>
-          <div class="text-wrapper-h2">Hi. My name is Andrew Jin. Call me AndJ for short.</div>
-        </div>
-        <div class="cards-scroll-container">
-          <button class="scroll-arrow scroll-arrow-left" data-target="about-cards" aria-label="Scroll left">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="cards" id="about-cards">
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Who I am</div>
-                <p class="p">
-                  You can learn more about who I am and what I'm up to from a <a href="" target="_blank" rel="noopener">short biography</a>, or the rest of this home page.
+      <main>
+        <section class="hero">
+          <div class="hero-text">
+            <h1 class="hero-title">AndJ</h1>
+            <p class="hero-subtitle">We Build Great Stories</p>
+          </div>
+        </section>
+        <section id="about" class="section">
+          <div class="section-heading">
+            <h2 class="section-title">About</h2>
+            <p class="section-subtitle">Hi. My name is Andrew Jin. Call me AndJ for short.</p>
+          </div>
+          <div class="cards-scroll-container">
+            <button class="scroll-arrow scroll-arrow-left" data-target="about-cards" aria-label="Scroll left">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="card-rail" id="about-cards" tabindex="0" role="region" aria-label="About cards">
+              <article class="card">
+                <h3 class="card-title">Who I am</h3>
+                <p class="card-text">
+                  You can learn more about who I am and what I'm up to from a short biography (coming soon), or the rest of this home page.
                 </p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Stories</div>
-                <p class="p">I believe this world is consisted of stories, and I mean that in a very strict sense.
-                Read this <a href="">article</a>, if you wish to get to know me.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Building</div>
-                <p class="p">To Confront, Innovate, and Create - These are words I live by. Choice of words were inspired by the lyrics from a <a href="https://open.spotify.com/track/0yyWvtaYYHBG6uypVvnW6n?si=95b872d616434dc7" target="_blank" rel="noopener">song</a>.
+              </article>
+              <article class="card">
+                <h3 class="card-title">Stories</h3>
+                <p class="card-text">I believe this world consists of stories, and I mean that in a very strict sense.
+                Read the article (coming soon), if you wish to get to know me.</p>
+              </article>
+              <article class="card">
+                <h3 class="card-title">Building</h3>
+                <p class="card-text">To Confront, Innovate, and Create — these are words I live by. The choice of words was inspired by the lyrics of a <a href="https://open.spotify.com/track/0yyWvtaYYHBG6uypVvnW6n?si=95b872d616434dc7" target="_blank" rel="noopener">song</a>.
                 Btw, buildings are all three of them. Guess why.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Stuff I love</div>
-                <p class="p">Some things deserve attention. This card is dedicated to the things that make this world worth living.
-                  <a href="" target="_blank">Books</a>, <a href="" target="_blank">Fashion</a>, <a href="" target="_blank">Music</a>, <a href="" target="_blank">Coffee</a>, and Humans (Not all of them). </p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Who.I.am.not</div>
-                <p class="p">Otoh, some things are just not my type.
+              </article>
+              <article class="card">
+                <h3 class="card-title">Stuff I love</h3>
+                <p class="card-text">Some things deserve attention. This card is dedicated to the things that make this world worth living:
+                  books, fashion, music, coffee, and humans (not all of them).</p>
+              </article>
+              <article class="card">
+                <h3 class="card-title">Who.I.am.not</h3>
+                <p class="card-text">Otoh, some things are just not my type.
                 <a href="https://www.meta.com/" target="_blank" rel="noopener">Meta</a> is one of them. Don't expect to find me on their platforms.
                 </p>
-              </div>
+              </article>
+              <article class="card">
+                <h3 class="card-title">The Team</h3>
+                <p class="card-text">Great things can be achieved together. Get to know me, and more importantly, the amazing people around me.</p>
+              </article>
             </div>
+            <button class="scroll-arrow scroll-arrow-right" data-target="about-cards" aria-label="Scroll right">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">The Team</div>
-                <p class="p">Great things can be achieved together. <a href="">Get to know me</a>, and more importantly, the amazing people around me.</p>
-              </div>
-            </div>
+        </section>
+        <section id="projects" class="section">
+          <div class="section-heading">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Translating individual stories into tangible forms of craft.</p>
           </div>
-          <button class="scroll-arrow scroll-arrow-right" data-target="about-cards" aria-label="Scroll right">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        </div>
-      </div>
-      <div id="projects" class="section">
-        <div class="text-content-heading">
-          <div class="text-wrapper-h1">Projects</div>
-          <div class="text-wrapper-h2">Translating individual stories into tangible forms of craft.</div>
-        </div>
-        <div class="cards-scroll-container">
-          <button class="scroll-arrow scroll-arrow-left" data-target="projects-cards" aria-label="Scroll left">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="cards" id="projects-cards">
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Baby Moriyama</div>
-                <p class="p">An algorithmic adaptation of decentralized housing for the steep, high-density topography of Seoul. By internalizing movement through a minimal-surface floating alley, it secures spatial freedom and privacy within a singular urban organism.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Bézier Yoshimoto</div>
-                <p class="p">A parametric reinterpretation of the Yoshimoto Cube, utilizing Bézier surfaces and waffle structures to rationalize complex kinematics. This computational experiment transforms a 1971 invention into a seamless topography for human comfort.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">ANDJ's Nametag</div>
-                <p class="p">A kinetic object born from the geometry of a name, balancing Pythagorean rigor with interpretive utility. This birch-crafted vessel evolves through time, inviting users to discover the concealed narrative within its arcs and lines.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Food Innovation Hub</div>
-                <p class="p">
+          <div class="cards-scroll-container">
+            <button class="scroll-arrow scroll-arrow-left" data-target="projects-cards" aria-label="Scroll left">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="card-rail" id="projects-cards" tabindex="0" role="region" aria-label="Project cards">
+              <article class="card">
+                <h3 class="card-title">Baby Moriyama</h3>
+                <p class="card-text">An algorithmic adaptation of decentralized housing for the steep, high-density topography of Seoul. By internalizing movement through a minimal-surface floating alley, it secures spatial freedom and privacy within a singular urban organism.</p>
+              </article>
+              <article class="card">
+                <h3 class="card-title">Bézier Yoshimoto</h3>
+                <p class="card-text">A parametric reinterpretation of the Yoshimoto Cube, utilizing Bézier surfaces and waffle structures to rationalize complex kinematics. This computational experiment transforms a 1971 invention into a seamless topography for human comfort.</p>
+              </article>
+              <article class="card">
+                <h3 class="card-title">ANDJ's Nametag</h3>
+                <p class="card-text">A kinetic object born from the geometry of a name, balancing Pythagorean rigor with interpretive utility. This birch-crafted vessel evolves through time, inviting users to discover the concealed narrative within its arcs and lines.</p>
+              </article>
+              <article class="card">
+                <h3 class="card-title">Food Innovation Hub</h3>
+                <p class="card-text">
                   <a href="https://naver.me/G5PRXoMi" target="_blank" rel="noopener">Proposal for a hub</a> where various chefs and ingredient suppliers can collaborate to develop unique street foods, embodying the distinctive characteristics in Seoul Central Market.
                 </p>
-              </div>
+              </article>
             </div>
+            <button class="scroll-arrow scroll-arrow-right" data-target="projects-cards" aria-label="Scroll right">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
-          
-          
-          <button class="scroll-arrow scroll-arrow-right" data-target="projects-cards" aria-label="Scroll right">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        </div>
-      </div>
-      <div id="education" class="section">
-        <div class="text-content-heading">
-          <div class="text-wrapper-h1">Education</div>
-          <div class="text-wrapper-h2">Integrating diverse knowledge to find shared principles of creation.</div>
-        </div>
-        <div class="cards-2">
-          <div class="card-2">
-            <img class="icon" src="assets/snu.png"/>
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Seoul National University</div>
-                <p class="p">
-                  Major in <a href="https://architecture.snu.ac.kr" target="_blank">Architecture</a>,
-                  Interdisciplinary major in <a href="https://imai.snu.ac.kr" target="_blank">Artificial Intelligence</a>,
+        </section>
+        <section id="education" class="section">
+          <div class="section-heading">
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">Integrating diverse knowledge to find shared principles of creation.</p>
+          </div>
+          <div class="card-stack">
+            <article class="card card--row">
+              <img class="card-logo" src="assets/snu.png" alt="Seoul National University emblem" width="56" height="56" />
+              <div class="card-body">
+                <h3 class="card-title">Seoul National University</h3>
+                <p class="card-text">
+                  Major in <a href="https://architecture.snu.ac.kr" target="_blank" rel="noopener">Architecture</a>,
+                  Interdisciplinary major in <a href="https://imai.snu.ac.kr" target="_blank" rel="noopener">Artificial Intelligence</a>,
                   2022.03 ~ Present.
                 </p>
               </div>
-            </div>
-          </div>
-          <div class="card-2">
-            <img class="icon" src="assets/sasa.jpg" />
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Sejong Academy of Science and Arts</div>
-                <p class="p">
+            </article>
+            <article class="card card--row">
+              <img class="card-logo" src="assets/sasa.jpg" alt="Sejong Academy of Science and Arts emblem" width="56" height="56" />
+              <div class="card-body">
+                <h3 class="card-title">Sejong Academy of Science and Arts</h3>
+                <p class="card-text">
                   <a href="https://naver.me/xPUa2Jry" target="_blank" rel="noopener">Graduation thesis</a> on Design and Engineering,
                   2019.03 ~ 2022.02.
                 </p>
               </div>
-            </div>
+            </article>
           </div>
-        </div>
-      </div>
-      <div id="experience" class="section">
-        <div class="text-content-heading">
-          <div class="text-wrapper-h1">Experience</div>
-          <div class="text-wrapper-h2">Defining chapters of sustained focus and collective building.</div>
-        </div>
-        <div class="cards-2">
-          <div class="card-2">
-            <img class="icon" src="assets/routinery.jpg" />
-            <div class="body">
-              <div class="text">
-                <div class="text-wrapper-h1">Routinery</div>
-                <p class="p">
+        </section>
+        <section id="experience" class="section">
+          <div class="section-heading">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">Defining chapters of sustained focus and collective building.</p>
+          </div>
+          <div class="card-stack">
+            <article class="card card--row">
+              <img class="card-logo" src="assets/routinery.jpg" alt="Routinery app icon" width="56" height="56" />
+              <div class="card-body">
+                <h3 class="card-title">Routinery</h3>
+                <p class="card-text">
                   Product Manager of
-                  <a href="routinery.app" target="_blank" rel="noopener">Routinery</a>,
+                  <a href="https://routinery.app" target="_blank" rel="noopener">Routinery</a>,
                   2024.01 ~ 2025.01.
                 </p>
               </div>
-            </div>
-            
+            </article>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
       <footer class="footer">
           <p class="footer-text">Contact : seunghoojin@gmail.com</p>
           <p class="footer-text">Address : 1, Gwanak-ro, Gwanak-gu, Seoul, Republic of Korea</p>
